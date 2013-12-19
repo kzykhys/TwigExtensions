@@ -99,6 +99,7 @@ Text            | Utilities for strings (Some of them are inspired by Python [Ji
 Snippet         | Embedding various snippets
 Markdown        | Github Flavored Markdown support
 SyntaxHighlight | Syntax Highlighting (pygments/google-code-prettify)
+Less            | Compiles LESS to CSS
 
 Register extensions to Twig
 -------------------------------
