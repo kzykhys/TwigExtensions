@@ -3,6 +3,7 @@
 namespace KzykHys\TwigExtensions;
 
 use KzykHys\TwigExtensions\Extension\Core;
+use KzykHys\TwigExtensions\Extension\Less;
 use KzykHys\TwigExtensions\Extension\Markdown;
 use KzykHys\TwigExtensions\Extension\Snippet;
 use KzykHys\TwigExtensions\Extension\SyntaxHighlight;
@@ -24,6 +25,7 @@ class ExtensionAggregate extends \Twig_Extension
         $environment->addExtension(new Snippet());
         $environment->addExtension(new SyntaxHighlight());
         $environment->addExtension(new Text());
+        $environment->addExtension(new Less());
     }
 
     /**

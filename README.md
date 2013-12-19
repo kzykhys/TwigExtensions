@@ -119,6 +119,7 @@ Name             | Extension       | Description
 -----------------|-----------------|-------------
 [unless]         | Core            | Negated form of the if statement
 [pygments]       | SyntaxHighlight | Highlight the code (requires [Pygments.php][pygmentsphp])
+[less]           | Less            | Converts LESS to CSS
 
 ### Filters
 
@@ -146,6 +147,7 @@ Name             | Extension       | Description
 
 [unless]: doc/tags/unless.md
 [pygments]: doc/tags/pygments.md
+[less]: doc/tags/less.md
 [center]: doc/filters/center.md
 [filesizeformat]: doc/filters/filesizeformat.md
 [markdown]: doc/filters/markdown.md
