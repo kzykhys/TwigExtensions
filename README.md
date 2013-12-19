@@ -169,4 +169,6 @@ Name             | Extension       | Description
 
 [twig]: http://twig.sensiolabs.org
 [jinja]: http://jinja.pocoo.org
-[pygmentsphp]: http://github.com/kzykhys/Pygments.php
+[pygmentsphp]: https://github.com/kzykhys/Pygments.php
+[ciconia]: http://ciconia.kzykhys.com/
+[lessphp]: http://leafo.net/lessphp/
