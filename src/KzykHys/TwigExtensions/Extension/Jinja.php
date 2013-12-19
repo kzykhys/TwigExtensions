@@ -22,6 +22,16 @@ class Jinja extends \Twig_Extension
     /**
      * {@inheritdoc}
      */
+    public function getTests()
+    {
+        return array(
+            new \Twig_SimpleTest('callable', array($this, 'isCallable'))
+        );
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function getName()
     {
         return 'jinja';
@@ -38,10 +48,9 @@ class Jinja extends \Twig_Extension
             return $value;
         }
 
-        $left = ceil(($width - $length) / 2);
-        $right = $left + (($width - $length) % 2);
+        $spaces = ceil(($width - $length) / 2);
 
-        return sprintf('%s%s%s', str_repeat(' ', $left), $value, str_repeat(' ', $right));
+        return sprintf('%s%s', str_repeat(' ', $spaces), $value);
     }
 
     /**
@@ -67,6 +76,14 @@ class Jinja extends \Twig_Extension
         }
 
         return sprintf('%.1f %s', ($base * $bytes / $unit), $prefix . ($binary ? 'iB' : 'B'));
+    }
+
+    /**
+     * Return whether the object is callable
+     */
+    public function isCallable($var)
+    {
+        return is_callable($var);
     }
 
 }
