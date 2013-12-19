@@ -4,23 +4,30 @@ Twig Extensions
 Add more fun to [Twig][twig]. Inspired by Jinja2, Jekyll.
 
 ``` twig
+{% block css %}
+  <style type="text/css">
+  {% less %}
+    {% include 'mixins.less' %}
+    .container {
+      .row {
+        &:first-child { margin-bottom: @m; }
+      }
+    }
+  {% endless %}
+  </style>
+{% endblock %}
+
 {% unless user.active %}
   <div class="alert">Please <a href="#">Login</a></div>
 {% endunless %}
 
 {{ gist(6421704) }}
-{{ gist(6316404, 'default.conf') }}
 
 {{ post.content|markdown }}
 
-{% pygments go linenos %}
-package main
-
-import "fmt"
-
-func main() {
-    fmt.Println("Hello World!")
-}
+{% pygments brainfuck linenos %}
++++++++++[>++++++++>+++++++++++>+++++<<<-]>.>++.+++++++..+++.>-.
+------------.<++++++++.--------.+++.------.--------.>+.
 {% endpygments %}
 ```
 
