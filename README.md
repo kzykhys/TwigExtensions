@@ -68,6 +68,7 @@ Extension       | Description
 Core            | Provides tags and tests
 Text            | Utilities for strings (Some of them are inspired by Python [Jinja2][jinja])
 Snippets        | Embedding various snippets
+Markdown        | Github Flavored Markdown support
 SyntaxHighlight | Syntax Highlighting (pygments/google-code-prettify)
 
 Register extensions to Twig
@@ -106,6 +107,7 @@ Name             | Extension       | Description
 -----------------|-----------------|-------------
 [center]         | Text            | Centers the value in a field of a given width.
 [filesizeformat] | Text            | Format the value like a ‘human-readable’ file size (i.e. 13 kB, 4.1 MB, 102 Bytes, etc)
+[markdown]       | Markdown        | Transform markdown into html
 
 ### Functions
 
@@ -127,6 +129,7 @@ Name             | Extension       | Description
 [pygments]: doc/tags/pygments.md
 [center]: doc/filters/center.md
 [filesizeformat]: doc/filters/filesizeformat.md
+[markdown]: doc/filters/markdown.md
 [lipsum]: doc/functions/lipsum.md
 [gist]: doc/functions/gist.md
 [pastebin]: doc/functions/pastebin.md
