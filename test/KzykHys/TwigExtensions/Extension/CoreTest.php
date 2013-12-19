@@ -48,15 +48,6 @@ class CoreTest extends PHPUnit_Framework_TestCase
         $this->assertEquals('truetruefalsetruetruefalse', $out);
     }
 
-    public function testLipsumFunction()
-    {
-        $loader = new Twig_Loader_Filesystem(__DIR__ . '/../Resources/Core');
-        $twig   = new Twig_Environment($loader);
-        $twig->addExtension(new Core());
-
-        $twig->render('function_lipsum.twig');
-    }
-
     /**
      * @return array
      */

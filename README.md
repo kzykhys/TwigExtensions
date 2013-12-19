@@ -1,12 +1,22 @@
 Twig Extensions
 ===============
 
+Requirements
+------------
+
+* PHP5.3
+
+### Optional requirements
+
+* Python2.4+ and Pygments ([kzykhys/Pygments.php][pygmentsphp]) for SyntaxHighlight extension
+
 A List of Extensions
 --------------------
 
 Extension       | Description
 ----------------|-----------
 Core            | Basic features (Some of them are inspired by Python [Jinja2][jinja])
+Text            | Utilities for strings
 SyntaxHighlight | Syntax Highlighting (pygments/google-code-prettify)
 
 Register extensions to Twig
@@ -43,14 +53,14 @@ pygments       | SyntaxHighlight | Highlight the code (requires [Pygments.php][p
 
 Name           | Extension       | Description
 ---------------|-----------------|-------------
-center         | Core            | Centers the value in a field of a given width.
-filesizeformat | Core            | Format the value like a ‘human-readable’ file size (i.e. 13 kB, 4.1 MB, 102 Bytes, etc)
+center         | Text            | Centers the value in a field of a given width.
+filesizeformat | Text            | Format the value like a ‘human-readable’ file size (i.e. 13 kB, 4.1 MB, 102 Bytes, etc)
 
 ### Functions
 
 Name           | Extension       | Description
 ---------------|-----------------|-------------
-lipsum         | Core            | Generates some lorem ipsum for the template
+lipsum         | Text            | Generates some lorem ipsum for the template
 gist           | Snippet         | Embed a gist
 pastebin       | Snipeet         | Embed a pastebin
 
