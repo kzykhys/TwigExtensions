@@ -37,7 +37,7 @@ Twig Extensions Reference
 
 Name           | Extension       | Description
 ---------------|-----------------|-------------
-pygments       | SyntaxHighlight | Highlight the code using [Pygments.php][pygmentsphp]
+pygments       | SyntaxHighlight | Highlight the code (requires [Pygments.php][pygmentsphp])
 
 ### Filters
 
@@ -45,6 +45,12 @@ Name           | Extension       | Description
 ---------------|-----------------|-------------
 center         | Jinja           | Centers the value in a field of a given width.
 filesizeformat | Jinja           | Format the value like a ‘human-readable’ file size (i.e. 13 kB, 4.1 MB, 102 Bytes, etc)
+
+### Functions
+
+Name           | Extension       | Description
+---------------|-----------------|-------------
+lipsum         | Jinja           | Generates some lorem ipsum for the template
 
 ### Tests
 

@@ -11,6 +11,16 @@ class Jinja extends \Twig_Extension
     /**
      * {@inheritdoc}
      */
+    public function getFunctions()
+    {
+        return array(
+            new \Twig_SimpleFunction('lipsum', array($this, 'lipsum'), array('is_safe' => array('html')))
+        );
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function getFilters()
     {
         return array(
@@ -35,6 +45,37 @@ class Jinja extends \Twig_Extension
     public function getName()
     {
         return 'jinja';
+    }
+
+    /**
+     * Generates some lorem ipsum for the template
+     */
+    public function lipsum($paragraphs = 5, $html = true, $min = 20, $max = 100)
+    {
+        $lines  = array();
+        $lipsum = array();
+
+        for ($i = 0; $i < $paragraphs; $i++) {
+            for ($j = rand($min, $max); $j > 0; $j--) {
+                $word = '';
+                for ($k = rand(2, 8); $k > 0; $k--) {
+                    $word .= chr(rand(97, 122));
+                }
+                $lipsum[$i][] = $word;
+            }
+        }
+
+        foreach ($lipsum as $line) {
+            $paragraph = ucfirst(implode(' ', $line)) . ".";
+
+            if ($html) {
+                $paragraph = '<p>' . $paragraph . '</p>';
+            }
+
+            $lines[] = $paragraph;
+        }
+
+        return implode("\n\n", $lines);
     }
 
     /**
