@@ -1,6 +1,27 @@
 Twig Extensions
 ===============
 
+Add more fun to [Twig][twig]
+
+``` twig
+{% unless user.active %}
+  <div class="alert">Please <a href="#">Login</a></div>
+{% endunless %}
+
+{{ gist(6421704) }}
+{{ gist(6316404, 'default.conf') }}
+
+{% pygments go linenos %}
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("Hello World!")
+}
+{% endpygments %}
+```
+
 Requirements
 ------------
 
@@ -9,6 +30,27 @@ Requirements
 ### Optional requirements
 
 * Python2.4+ and Pygments ([kzykhys/Pygments.php][pygmentsphp]) for SyntaxHighlight extension
+
+Installation
+------------
+
+``` json
+{
+    "require": {
+        "kzykhys/twig-extensions": "dev-master"
+    }
+}
+```
+
+``` php
+<?php
+
+$loader = new Twig_Loader_Filesystem('/path/to/templates');
+$twig   = new Twig_Environment($loader);
+
+// Registers all extensions
+$twig->addExtension(new \KzykHys\TwigExtensions\ExtensionAggregate());
+```
 
 A List of Extensions
 --------------------
@@ -82,5 +124,6 @@ Name             | Extension       | Description
 [callable]: doc/tests/callable.md
 [instanceof]: doc/tests/instanceof.md
 
+[twig]: http://twig.sensiolabs.org
 [jinja]: http://jinja.pocoo.org
 [pygmentsphp]: http://github.com/kzykhys/Pygments.php
