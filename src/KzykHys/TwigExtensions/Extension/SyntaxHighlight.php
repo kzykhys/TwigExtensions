@@ -15,6 +15,10 @@ class SyntaxHighlight extends \Twig_Extension
      */
     public function getTokenParsers()
     {
+        if (!class_exists('KzykHys\\Pygments\\Pygments')) {
+            return array();
+        }
+
         return array(
             new PygmentsTokenParser()
         );

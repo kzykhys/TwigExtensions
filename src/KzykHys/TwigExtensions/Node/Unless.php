@@ -2,6 +2,9 @@
 
 namespace KzykHys\TwigExtensions\Node;
 
+/**
+ * @author Kazuyuki Hayashi <hayashi@valnur.net>
+ */
 class Unless extends \Twig_Node
 {
 
@@ -20,8 +23,6 @@ class Unless extends \Twig_Node
             ->outdent()
             ->write("}\n")
         ;
-
-        echo $compiler->getSource();
     }
 
 } 
