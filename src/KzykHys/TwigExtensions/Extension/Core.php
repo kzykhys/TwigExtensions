@@ -5,8 +5,10 @@ namespace KzykHys\TwigExtensions\Extension;
 /**
  * @author Kazuyuki Hayashi <hayashi@valnur.net>
  */
-class Jinja extends \Twig_Extension
+class Core extends \Twig_Extension
 {
+
+    const EXPRESSION_INSTANCEOF = 'KzykHys\\TwigExtensions\\Node\\Expression\\Test\\InstanceOfExpression';
 
     /**
      * {@inheritdoc}
@@ -35,7 +37,9 @@ class Jinja extends \Twig_Extension
     public function getTests()
     {
         return array(
-            new \Twig_SimpleTest('callable', array($this, 'isCallable'))
+            new \Twig_SimpleTest('callable', array($this, 'isCallable')),
+            new \Twig_SimpleTest('instance of', null, array('node_class' => self::EXPRESSION_INSTANCEOF)),
+            new \Twig_SimpleTest('instanceof', null, array('node_class' => self::EXPRESSION_INSTANCEOF))
         );
     }
 
@@ -44,7 +48,7 @@ class Jinja extends \Twig_Extension
      */
     public function getName()
     {
-        return 'jinja';
+        return 'kzykhys_core';
     }
 
     /**

@@ -1,5 +1,7 @@
 <?php
 
+use KzykHys\TwigExtensions\Extension\SyntaxHighlight;
+
 class SyntaxHighlightTest extends PHPUnit_Framework_TestCase
 {
 
@@ -7,7 +9,7 @@ class SyntaxHighlightTest extends PHPUnit_Framework_TestCase
     {
         $loader = new Twig_Loader_Filesystem(__DIR__ . '/../Resources/SyntaxHighlight');
         $twig   = new Twig_Environment($loader);
-        \KzykHys\TwigExtensions\Extensions::register($twig);
+        $twig->addExtension(new SyntaxHighlight());
 
         $twig->render('tag_pygments.twig');
     }

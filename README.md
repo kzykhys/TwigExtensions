@@ -17,17 +17,16 @@ Register all extensions
 ``` php
 $loader = new Twig_Loader_Filesystem('/path/to/templates');
 $twig   = new Twig_Environment($loader);
-
-\KzykHys\TwigExtensions\Extensions::register($twig);
+$twig->addExtension(new \KzykHys\TwigExtensions\ExtensionAggregate());
 ```
 
-Or doing manually
+Or doing it manually
 
 ``` php
 $loader = new Twig_Loader_Filesystem('/path/to/templates');
 $twig   = new Twig_Environment($loader);
-
 $twig->addExtension(new \KzykHys\TwigExtensions\Extension\Jinja());
+$twig->addExtension(new \KzykHys\TwigExtensions\Extension\Snippet());
 ```
 
 Twig Extensions Reference
@@ -58,6 +57,7 @@ pastebin       | Snipeet         | Embed a pastebin
 
 Name           | Extension       | Description
 ---------------|-----------------|-------------
-callable       | Jinja           | Return whether the object is callable
+callable       | Core            | Return whether the object is callable
+instanceof     | Core            | Return whether a variable is an instantiated object of a certain class
 
 [pygmentsphp]: http://github.com/kzykhys/Pygments.php

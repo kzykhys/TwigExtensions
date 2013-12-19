@@ -24,7 +24,7 @@ class Snippet extends \Twig_Extension
      */
     public function getName()
     {
-        return 'snippet';
+        return 'kzykhys_snippet';
     }
 
     /**

@@ -1,8 +1,8 @@
 <?php
 
-use KzykHys\TwigExtensions\Extension\Jinja;
+use KzykHys\TwigExtensions\Extension\Core;
 
-class JinjaTest extends PHPUnit_Framework_TestCase
+class CoreTest extends PHPUnit_Framework_TestCase
 {
 
     /**
@@ -10,9 +10,9 @@ class JinjaTest extends PHPUnit_Framework_TestCase
      */
     public function testPatterns($template, $expected)
     {
-        $loader = new Twig_Loader_Filesystem(__DIR__ . '/../Resources/Jinja');
+        $loader = new Twig_Loader_Filesystem(__DIR__ . '/../Resources/Core');
         $twig   = new Twig_Environment($loader);
-        $twig->addExtension(new Jinja());
+        $twig->addExtension(new Core());
 
         $out = $twig->render($template);
         $this->assertEquals($expected, $out, $template);
@@ -20,9 +20,9 @@ class JinjaTest extends PHPUnit_Framework_TestCase
 
     public function testCallableTest()
     {
-        $loader   = new Twig_Loader_Filesystem(__DIR__ . '/../Resources/Jinja');
+        $loader   = new Twig_Loader_Filesystem(__DIR__ . '/../Resources/Core');
         $twig     = new Twig_Environment($loader);
-        $twig->addExtension(new Jinja());
+        $twig->addExtension(new Core());
 
         $out = $twig->render('test_callable.twig', array(
             'closure'      => function () {},
@@ -33,11 +33,26 @@ class JinjaTest extends PHPUnit_Framework_TestCase
         $this->assertEquals('truetruefalse', $out);
     }
 
+    public function testInstanceOfTest()
+    {
+        $loader   = new Twig_Loader_Filesystem(__DIR__ . '/../Resources/Core');
+        $twig     = new Twig_Environment($loader);
+        $twig->addExtension(new Core());
+
+        $out = $twig->render('test_instanceof.twig', array(
+            'stdClass'      => new stdClass(),
+            'splStack' => new \SplStack(),
+            'integer'       => 100
+        ));
+
+        $this->assertEquals('truetruefalsetruetruefalse', $out);
+    }
+
     public function testLipsumFunction()
     {
-        $loader = new Twig_Loader_Filesystem(__DIR__ . '/../Resources/Jinja');
+        $loader = new Twig_Loader_Filesystem(__DIR__ . '/../Resources/Core');
         $twig   = new Twig_Environment($loader);
-        $twig->addExtension(new Jinja());
+        $twig->addExtension(new Core());
 
         $twig->render('function_lipsum.twig');
     }
@@ -49,7 +64,7 @@ class JinjaTest extends PHPUnit_Framework_TestCase
     {
         $finder = new \Symfony\Component\Finder\Finder();
         $finder
-            ->in(__DIR__ . '/../Resources/Jinja')
+            ->in(__DIR__ . '/../Resources/Core')
             ->files()
             ->name('*.out');
 

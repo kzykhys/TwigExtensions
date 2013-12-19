@@ -25,7 +25,7 @@ class SyntaxHighlight extends \Twig_Extension
      */
     public function getName()
     {
-        return 'syntaxhighlight';
+        return 'kzykhys_syntaxhighlight';
     }
 
 }
