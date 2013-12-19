@@ -2,6 +2,8 @@
 
 namespace KzykHys\TwigExtensions\Extension;
 
+use KzykHys\TwigExtensions\TokenParser\Unless;
+
 /**
  * @author Kazuyuki Hayashi <hayashi@valnur.net>
  */
@@ -9,6 +11,16 @@ class Core extends \Twig_Extension
 {
 
     const EXPRESSION_INSTANCEOF = 'KzykHys\\TwigExtensions\\Node\\Expression\\Test\\InstanceOfExpression';
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getTokenParsers()
+    {
+        return array(
+            new Unless()
+        );
+    }
 
     /**
      * {@inheritdoc}

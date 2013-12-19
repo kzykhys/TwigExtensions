@@ -1,0 +1,5 @@
+{% set test = false %}
+{% unless false %}1{% endunless %}
+{% unless 0 %}2{% endunless %}
+{% unless test %}3{% endunless %}
+{% unless true %}4{% endunless %}
