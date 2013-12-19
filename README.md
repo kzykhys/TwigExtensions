@@ -165,6 +165,9 @@ Name             | Extension       | Description
 [center]: doc/filters/center.md
 [filesizeformat]: doc/filters/filesizeformat.md
 [markdown]: doc/filters/markdown.md
+[md5]: doc/filters/md5.md
+[sha1]: doc/filters/sha1.md
+[sha512]: doc/filters/sha512.md
 [lipsum]: doc/functions/lipsum.md
 [gist]: doc/functions/gist.md
 [pastebin]: doc/functions/pastebin.md
