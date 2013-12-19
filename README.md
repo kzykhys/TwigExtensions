@@ -38,6 +38,7 @@ Twig Extensions Reference
 Name           | Extension       | Description
 ---------------|-----------------|-------------
 pygments       | SyntaxHighlight | Highlight the code (requires [Pygments.php][pygmentsphp])
+gist           | Snippet         | Embed a gist
 
 ### Filters
 

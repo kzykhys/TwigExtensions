@@ -6,7 +6,7 @@ class JinjaTest extends PHPUnit_Framework_TestCase
 {
 
     /**
-     * @dataProvider provideFilters
+     * @dataProvider provideResources
      */
     public function testPatterns($template, $expected)
     {
@@ -45,7 +45,7 @@ class JinjaTest extends PHPUnit_Framework_TestCase
     /**
      * @return array
      */
-    public function provideFilters()
+    public function provideResources()
     {
         $finder = new \Symfony\Component\Finder\Finder();
         $finder
@@ -66,4 +66,9 @@ class JinjaTest extends PHPUnit_Framework_TestCase
         return $files;
     }
 
-} 
+}
+
+class Invokable
+{
+    public function __invoke() { }
+}
