@@ -58,6 +58,16 @@ Requirements
     }
     ```
 
+*   [leafo/lessphp][lessphp] for Less extension
+
+    ``` json
+    {
+        "require": {
+            "leafo/lessphp": ">=0.4"
+        }
+    }
+    ```
+
 Installation
 ------------
 
