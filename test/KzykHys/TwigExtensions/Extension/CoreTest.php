@@ -2,6 +2,9 @@
 
 use KzykHys\TwigExtensions\Extension\Core;
 
+/**
+ * @author Kazuyuki Hayashi <hayashi@valnur.net>
+ */
 class CoreTest extends PHPUnit_Framework_TestCase
 {
 

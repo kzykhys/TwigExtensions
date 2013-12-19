@@ -100,6 +100,7 @@ Snippet         | Embedding various snippets
 Markdown        | Github Flavored Markdown support
 SyntaxHighlight | Syntax Highlighting (pygments/google-code-prettify)
 Less            | Compiles LESS to CSS
+Pipe            |
 
 Register extensions to Twig
 -------------------------------
@@ -142,6 +143,7 @@ Name             | Extension       | Description
 [md5]            | Text            | Calculate the md5 hash of a string
 [sha1]           | Text            | Calculate the sha1 hash of a string
 [sha512]         | Text            | Calculate the sha512 hash of a string
+[pipe]           | Pipe            | Executes an external command
 
 ### Functions
 
@@ -162,15 +164,19 @@ Name             | Extension       | Description
 [unless]: doc/tags/unless.md
 [pygments]: doc/tags/pygments.md
 [less]: doc/tags/less.md
+
 [center]: doc/filters/center.md
 [filesizeformat]: doc/filters/filesizeformat.md
 [markdown]: doc/filters/markdown.md
 [md5]: doc/filters/md5.md
 [sha1]: doc/filters/sha1.md
 [sha512]: doc/filters/sha512.md
+[pipe]: doc/filters/pipe.md
+
 [lipsum]: doc/functions/lipsum.md
 [gist]: doc/functions/gist.md
 [pastebin]: doc/functions/pastebin.md
+
 [callable]: doc/tests/callable.md
 [instanceof]: doc/tests/instanceof.md
 

@@ -1,0 +1,6 @@
+{% set text %}
+item1
+item2
+item3
+{% endset %}
+{{ text|pipe('grep item2') }}

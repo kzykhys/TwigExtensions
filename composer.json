@@ -16,11 +16,13 @@
     "suggest": {
         "kzykhys/ciconia": "Provides Github Flavored Markdown parser",
         "kzykhys/pygments": "Provides syntax highlighter",
-        "leafo/lessphp": "Provides LESS compiler"
+        "leafo/lessphp": "Provides LESS compiler",
+        "symfony/process": ""
     },
     "require-dev": {
         "twig/twig": ">=1.10",
         "symfony/finder": ">=2.3",
+        "symfony/process": ">=2.3",
         "kzykhys/pygments": ">=1.0",
         "kzykhys/ciconia": ">=1.0",
         "leafo/lessphp": ">=0.4"
