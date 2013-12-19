@@ -9,7 +9,7 @@ class TwigExtensionsTest extends PHPUnit_Framework_TestCase
     public function testFilters($template, $expected)
     {
         $loader = new Twig_Loader_Filesystem(__DIR__ . '/Resources/filter');
-        $twig = new Twig_Environment($loader);
+        $twig   = new Twig_Environment($loader);
         \KzykHys\TwigExtensions\Extensions::register($twig);
         $out = $twig->render($template);
 
@@ -18,13 +18,13 @@ class TwigExtensionsTest extends PHPUnit_Framework_TestCase
 
     public function testCallableTest()
     {
-        $expected = file_get_contents(__DIR__.'/Resources/test/jinja_callable.out');
-        $loader = new Twig_Loader_Filesystem(__DIR__ . '/Resources/test');
-        $twig = new Twig_Environment($loader);
+        $expected = file_get_contents(__DIR__ . '/Resources/test/jinja_callable.out');
+        $loader   = new Twig_Loader_Filesystem(__DIR__ . '/Resources/test');
+        $twig     = new Twig_Environment($loader);
         \KzykHys\TwigExtensions\Extensions::register($twig);
         $out = $twig->render('jinja_callable.twig', array(
-            'closure' => function () {},
-            'invoke'  => new Invokable(),
+            'closure'      => function () {},
+            'invoke'       => new Invokable(),
             'not_callable' => 100
         ));
 
@@ -34,7 +34,7 @@ class TwigExtensionsTest extends PHPUnit_Framework_TestCase
     public function testPygmentsTag()
     {
         $loader = new Twig_Loader_Filesystem(__DIR__ . '/Resources/tag');
-        $twig = new Twig_Environment($loader);
+        $twig   = new Twig_Environment($loader);
         \KzykHys\TwigExtensions\Extensions::register($twig);
 
         echo $twig->render('syntax_pygments.twig');
@@ -67,6 +67,6 @@ class Invokable
 {
     public function __invoke()
     {
-        
+
     }
 }

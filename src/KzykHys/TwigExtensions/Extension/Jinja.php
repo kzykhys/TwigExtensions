@@ -58,8 +58,10 @@ class Jinja extends \Twig_Extension
      */
     public function filesizeformat($bytes, $binary = false)
     {
-        $bytes = (float) $bytes;
-        $base = $binary ? 1024 : 1000;
+        $unit     = 'Byte';
+        $prefix   = '';
+        $bytes    = (float)$bytes;
+        $base     = $binary ? 1024 : 1000;
         $prefixes = array('K', 'M', 'G', 'T', 'P', 'E', 'Z', 'Y');
 
         if ($bytes == 1) {

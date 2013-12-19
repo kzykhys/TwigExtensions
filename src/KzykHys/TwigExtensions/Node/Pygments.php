@@ -2,12 +2,16 @@
 
 namespace KzykHys\TwigExtensions\Node;
 
-use Twig_Compiler;
-
+/**
+ * @author Kazuyuki Hayashi <hayashi@valnur.net>
+ */
 class Pygments extends \Twig_Node
 {
 
-    public function compile(Twig_Compiler $compiler)
+    /**
+     * {@inheritdoc}
+     */
+    public function compile(\Twig_Compiler $compiler)
     {
         $lexer = $this->getAttribute('lexer');
         $lexer = $lexer ? "'".$lexer."'" : 'null';
@@ -27,8 +31,6 @@ class Pygments extends \Twig_Node
             ->write('$pygments_output = $pygments->highlight($raw_input, ' . $lexer . ', "html"' . $options. ');'."\n")
             ->write('echo $pygments_output;')
         ;
-
-        echo $compiler->getSource();
     }
 
 } 

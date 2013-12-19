@@ -4,6 +4,9 @@ namespace KzykHys\TwigExtensions\TokenParser;
 
 use KzykHys\TwigExtensions\Node\Pygments as PygmentsNode;
 
+/**
+ * @author Kazuyuki Hayashi <hayashi@valnur.net>
+ */
 class Pygments extends \Twig_TokenParser
 {
 
