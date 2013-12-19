@@ -29,7 +29,15 @@ Requirements
 
 ### Optional requirements
 
-* Python2.4+ and Pygments ([kzykhys/Pygments.php][pygmentsphp]) for SyntaxHighlight extension
+*   Python2.4+ and Pygments ([kzykhys/Pygments.php][pygmentsphp]) for SyntaxHighlight extension
+
+    ``` json
+    {
+        "require": {
+            "kzykhys/pygments": ">=1.0"
+        }
+    }
+    ```
 
 Installation
 ------------
