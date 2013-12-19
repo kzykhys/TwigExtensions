@@ -138,6 +138,9 @@ Name             | Extension       | Description
 [center]         | Text            | Centers the value in a field of a given width.
 [filesizeformat] | Text            | Format the value like a ‘human-readable’ file size (i.e. 13 kB, 4.1 MB, 102 Bytes, etc)
 [markdown]       | Markdown        | Transform markdown into html
+[md5]            | Text            | Calculate the md5 hash of a string
+[sha1]           | Text            | Calculate the sha1 hash of a string
+[sha512]         | Text            | Calculate the sha512 hash of a string
 
 ### Functions
 

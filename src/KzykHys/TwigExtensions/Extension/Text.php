@@ -25,7 +25,10 @@ class Text extends \Twig_Extension
     {
         return array(
             new \Twig_SimpleFilter('center', array($this, 'center')),
-            new \Twig_SimpleFilter('filesizeformat', array($this, 'filesizeformat'))
+            new \Twig_SimpleFilter('filesizeformat', array($this, 'filesizeformat')),
+            new \Twig_SimpleFilter('md5', 'md5'),
+            new \Twig_SimpleFilter('sha1', 'sha1'),
+            new \Twig_SimpleFilter('sha512', array($this, 'sha512'))
         );
     }
 
@@ -103,6 +106,10 @@ class Text extends \Twig_Extension
         return sprintf('%.1f %s', ($base * $bytes / $unit), $prefix . ($binary ? 'iB' : 'B'));
     }
 
+    public function sha512($text)
+    {
+        return hash('sha512', $text);
+    }
 
     /**
      * {@inheritdoc}
