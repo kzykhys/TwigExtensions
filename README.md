@@ -38,7 +38,6 @@ Twig Extensions Reference
 Name           | Extension       | Description
 ---------------|-----------------|-------------
 pygments       | SyntaxHighlight | Highlight the code (requires [Pygments.php][pygmentsphp])
-gist           | Snippet         | Embed a gist
 
 ### Filters
 
@@ -52,6 +51,8 @@ filesizeformat | Jinja           | Format the value like a ‘human-readable’ 
 Name           | Extension       | Description
 ---------------|-----------------|-------------
 lipsum         | Jinja           | Generates some lorem ipsum for the template
+gist           | Snippet         | Embed a gist
+pastebin       | Snipeet         | Embed a pastebin
 
 ### Tests
 

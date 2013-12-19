@@ -2,18 +2,20 @@
 
 namespace KzykHys\TwigExtensions\Extension;
 
-use KzykHys\TwigExtensions\TokenParser\Gist;
-
+/**
+ * @author Kazuyuki Hayashi <hayashi@valnur.net>
+ */
 class Snippet extends \Twig_Extension
 {
 
     /**
      * {@inheritdoc}
      */
-    public function getTokenParsers()
+    public function getFunctions()
     {
         return array(
-            new Gist()
+            new \Twig_SimpleFunction('gist', array($this, 'gist'), array('is_safe' => array('html'))),
+            new \Twig_SimpleFunction('pastebin', array($this, 'pastebin'), array('is_safe' => array('html')))
         );
     }
 
@@ -23,6 +25,26 @@ class Snippet extends \Twig_Extension
     public function getName()
     {
         return 'snippet';
+    }
+
+    /**
+     * Embed a gist
+     */
+    public function gist($id, $file = '')
+    {
+        if ($file) {
+            $file = '?file=' . $file;
+        }
+
+        return sprintf('<script src="https://gist.github.com/%s.js%s"></script>', $id, $file);
+    }
+
+    /**
+     * Enbed a pastebin
+     */
+    public function pastebin($id)
+    {
+        return sprintf('<script src="http://pastebin.com/embed_js.php?i=%s"></script>', $id);
     }
 
 }
