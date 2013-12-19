@@ -11,6 +11,8 @@ Add more fun to [Twig][twig]. Inspired by Jinja2, Jekyll.
 {{ gist(6421704) }}
 {{ gist(6316404, 'default.conf') }}
 
+{{ post.content|markdown }}
+
 {% pygments go linenos %}
 package main
 
@@ -35,6 +37,16 @@ Requirements
     {
         "require": {
             "kzykhys/pygments": ">=1.0"
+        }
+    }
+    ```
+
+*   PHP5.4+ and [kzykhys/Ciconia][ciconia] for Markdown extension
+
+    ``` json
+    {
+        "require": {
+            "kzykhys/ciconia": ">=1.0"
         }
     }
     ```
@@ -67,7 +79,7 @@ Extension       | Description
 ----------------|-----------
 Core            | Provides tags and tests
 Text            | Utilities for strings (Some of them are inspired by Python [Jinja2][jinja])
-Snippets        | Embedding various snippets
+Snippet         | Embedding various snippets
 Markdown        | Github Flavored Markdown support
 SyntaxHighlight | Syntax Highlighting (pygments/google-code-prettify)
 
