@@ -2,9 +2,9 @@
 
 namespace KzykHys\TwigExtensions;
 
-use KzykHys\TwigExtensions\Extension\Jinja;
+use KzykHys\TwigExtensions\Extension\Core;
+use KzykHys\TwigExtensions\Extension\Snippet;
 use KzykHys\TwigExtensions\Extension\SyntaxHighlight;
-use Twig_Environment;
 
 /**
  * @author Kazuyuki Hayashi <hayashi@valnur.net>
@@ -15,9 +15,10 @@ class ExtensionAggregate extends \Twig_Extension
     /**
      * {@inheritdoc}
      */
-    public function initRuntime(Twig_Environment $environment)
+    public function initRuntime(\Twig_Environment $environment)
     {
-        $environment->addExtension(new Jinja());
+        $environment->addExtension(new Core());
+        $environment->addExtension(new Snippet());
         $environment->addExtension(new SyntaxHighlight());
     }
 
