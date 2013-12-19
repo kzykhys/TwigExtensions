@@ -1,7 +1,7 @@
 Twig Extensions
 ===============
 
-Add more fun to [Twig][twig]
+Add more fun to [Twig][twig]. Inspired by Jinja2, Jekyll.
 
 ``` twig
 {% unless user.active %}
@@ -57,8 +57,9 @@ A List of Extensions
 
 Extension       | Description
 ----------------|-----------
-Core            | Basic features (Some of them are inspired by Python [Jinja2][jinja])
-Text            | Utilities for strings
+Core            | Provides tags and tests
+Text            | Utilities for strings (Some of them are inspired by Python [Jinja2][jinja])
+Snippets        | Embedding various snippets
 SyntaxHighlight | Syntax Highlighting (pygments/google-code-prettify)
 
 Register extensions to Twig
