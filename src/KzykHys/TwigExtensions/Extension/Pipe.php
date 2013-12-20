@@ -45,7 +45,7 @@ class Pipe extends \Twig_Extension
      */
     public function getName()
     {
-        return 'pipe';
+        return 'kzykhys_pipe';
     }
 
 }

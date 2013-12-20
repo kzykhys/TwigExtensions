@@ -20,14 +20,6 @@ class Snippet extends \Twig_Extension
     }
 
     /**
-     * {@inheritdoc}
-     */
-    public function getName()
-    {
-        return 'kzykhys_snippet';
-    }
-
-    /**
      * Embed a gist
      */
     public function gist($id, $file = '')
@@ -45,6 +37,14 @@ class Snippet extends \Twig_Extension
     public function pastebin($id)
     {
         return sprintf('<script src="http://pastebin.com/embed_js.php?i=%s"></script>', $id);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getName()
+    {
+        return 'kzykhys_snippet';
     }
 
 }
