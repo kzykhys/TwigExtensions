@@ -3,7 +3,7 @@ Twig Extensions
 
 Add more fun to [Twig][twig]. Inspired by Jinja2, Jekyll ...
 
-``` twig
+``` jinja
 {% block css %}
   <style type="text/css">
   {% less %}
@@ -81,7 +81,7 @@ Requirements
     }
     ```
 
-*   [symfony/process] for Pipe extension
+*   [symfony/process][symfony-process] for Pipe extension
 
     ``` json
     {
@@ -205,28 +205,29 @@ Kazuyuki Hayashi (@kzykhys)
 [ext-less]:            doc/Less.md
 [ext-pipe]:            doc/Pipe.md
 
-[unless]:         doc/tags/unless.md
-[pygments]:       doc/tags/pygments.md
-[less]:           doc/tags/less.md
+[unless]:          doc/tags/unless.md
+[pygments]:        doc/tags/pygments.md
+[less]:            doc/tags/less.md
 
-[center]:         doc/filters/center.md
-[filesizeformat]: doc/filters/filesizeformat.md
-[markdown]:       doc/filters/markdown.md
-[md5]:            doc/filters/md5.md
-[sha1]:           doc/filters/sha1.md
-[sha512]:         doc/filters/sha512.md
-[pipe]:           doc/filters/pipe.md
+[center]:          doc/filters/center.md
+[filesizeformat]:  doc/filters/filesizeformat.md
+[markdown]:        doc/filters/markdown.md
+[md5]:             doc/filters/md5.md
+[sha1]:            doc/filters/sha1.md
+[sha512]:          doc/filters/sha512.md
+[pipe]:            doc/filters/pipe.md
 
-[call]:           doc/functions/call.md
-[lipsum]:         doc/functions/lipsum.md
-[gist]:           doc/functions/gist.md
-[pastebin]:       doc/functions/pastebin.md
+[call]:            doc/functions/call.md
+[lipsum]:          doc/functions/lipsum.md
+[gist]:            doc/functions/gist.md
+[pastebin]:        doc/functions/pastebin.md
 
-[callable]:       doc/tests/callable.md
-[instanceof]:     doc/tests/instanceof.md
+[callable]:        doc/tests/callable.md
+[instanceof]:      doc/tests/instanceof.md
 
-[twig]:           http://twig.sensiolabs.org
-[jinja]:          http://jinja.pocoo.org
-[pygmentsphp]:    https://github.com/kzykhys/Pygments.php
-[ciconia]:        http://ciconia.kzykhys.com/
-[lessphp]:        http://leafo.net/lessphp/
+[twig]:            http://twig.sensiolabs.org
+[jinja]:           http://jinja.pocoo.org
+[pygmentsphp]:     https://github.com/kzykhys/Pygments.php
+[ciconia]:         http://ciconia.kzykhys.com/
+[lessphp]:         http://leafo.net/lessphp/
+[symfony-process]: http://symfony.com/doc/current/components/process.html
