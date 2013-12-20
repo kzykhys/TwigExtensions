@@ -36,7 +36,9 @@ Customized filesystem loader
 ``` php
 <?php
 
-$loader = new \KzykHys\TwigExtensions\Loader\Filesystem(__DIR__ . '/../Resources/Loader');
+use KzykHys\TwigExtensions\Loader\Filesystem;
+
+$loader = new Filesystem('/path/to/templates');
 $twig   = new Twig_Environment($loader);
 
 $twig->render(array('date.twig', 'archive.twig', 'default.twig'));
@@ -103,11 +105,13 @@ Installation
 ``` php
 <?php
 
+use KzykHys\TwigExtensions\ExtensionAggregate;
+
 $loader = new Twig_Loader_Filesystem('/path/to/templates');
 $twig   = new Twig_Environment($loader);
 
 // Registers all extensions
-$twig->addExtension(new \KzykHys\TwigExtensions\ExtensionAggregate());
+$twig->setExtensions(ExtensionAggregate::getExtensions());
 ```
 
 A List of Extensions
