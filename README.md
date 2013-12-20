@@ -1,7 +1,7 @@
 Twig Extensions
 ===============
 
-Add more fun to [Twig][twig]. Inspired by Jinja2, Jekyll.
+Add more fun to [Twig][twig]. Inspired by Jinja2, Jekyll ...
 
 ``` twig
 {% block css %}
