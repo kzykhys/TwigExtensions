@@ -135,7 +135,7 @@ Register all-in-one extension
 ``` php
 $loader = new Twig_Loader_Filesystem('/path/to/templates');
 $twig   = new Twig_Environment($loader);
-$twig->addExtension(new \KzykHys\TwigExtensions\ExtensionAggregate());
+$twig->setExtensions(ExtensionAggregate::getExtensions());
 ```
 
 Or register extensions which you like
