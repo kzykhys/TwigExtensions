@@ -186,6 +186,16 @@ Name             | Extension                              | Description
 [callable]       | [Core][ext-core]                       | Return whether the object is callable
 [instanceof]     | [Core][ext-core]                       | Return whether a variable is an instantiated object of a certain class
 
+License
+-------
+
+The MIT License
+
+Author
+------
+
+Kazuyuki Hayashi (@kzykhys)
+
 
 [ext-core]:            doc/Core.md
 [ext-text]:            doc/Text.md
