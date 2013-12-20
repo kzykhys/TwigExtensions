@@ -23,8 +23,8 @@ class CoreTest extends PHPUnit_Framework_TestCase
 
     public function testCallableTest()
     {
-        $loader   = new Twig_Loader_Filesystem(__DIR__ . '/../Resources/Core');
-        $twig     = new Twig_Environment($loader);
+        $loader = new Twig_Loader_Filesystem(__DIR__ . '/../Resources/Core');
+        $twig   = new Twig_Environment($loader);
         $twig->addExtension(new Core());
 
         $out = $twig->render('test_callable.twig', array(
@@ -34,6 +34,21 @@ class CoreTest extends PHPUnit_Framework_TestCase
         ));
 
         $this->assertEquals('truetruefalse', $out);
+    }
+
+    public function testCallFunction()
+    {
+        $loader = new Twig_Loader_Filesystem(__DIR__ . '/../Resources/Core');
+        $twig   = new Twig_Environment($loader);
+        $twig->addExtension(new Core());
+
+        $out = $twig->render('function_call.twig', array(
+            'closure' => function ($name) {
+                return "hello $name";
+            },
+        ));
+
+        $this->assertEquals('hello kzykhys', $out);
     }
 
     public function testInstanceOfTest()

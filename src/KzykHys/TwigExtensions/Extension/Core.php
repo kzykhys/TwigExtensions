@@ -25,6 +25,16 @@ class Core extends \Twig_Extension
     /**
      * {@inheritdoc}
      */
+    public function getFunctions()
+    {
+        return array(
+            new \Twig_SimpleFunction('call', array($this, 'call'))
+        );
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function getTests()
     {
         return array(
@@ -40,6 +50,21 @@ class Core extends \Twig_Extension
     public function isCallable($var)
     {
         return is_callable($var);
+    }
+
+    /**
+     * Call a callback
+     */
+    public function call($callable)
+    {
+        if (is_callable($callable)) {
+            $args = func_get_args();
+            $callable = array_shift($args);
+
+            return call_user_func_array($callable, $args);
+        }
+
+        return null;
     }
 
     /**

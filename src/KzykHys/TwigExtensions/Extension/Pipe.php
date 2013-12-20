@@ -34,7 +34,7 @@ class Pipe extends \Twig_Extension
         $process->run();
 
         if (!$process->isSuccessful()) {
-            return $value;
+            return false;
         }
 
         return $process->getOutput();

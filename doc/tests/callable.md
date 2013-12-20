@@ -17,4 +17,4 @@ $twig->render('template.twig', array(
 {% endif %}
 ```
 
-See also: call
+See also: [call](../functions/call.md)

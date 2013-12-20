@@ -174,6 +174,7 @@ Name             | Extension       | Description
 
 Name             | Extension       | Description
 -----------------|-----------------|-------------
+[call]           | Core            | Call a callback
 [lipsum]         | Text            | Generates some lorem ipsum for the template
 [gist]           | Snippet         | Embed a gist
 [pastebin]       | Snipeet         | Embed a pastebin
@@ -198,6 +199,7 @@ Name             | Extension       | Description
 [sha512]: doc/filters/sha512.md
 [pipe]: doc/filters/pipe.md
 
+[call]: doc/functions/call.md
 [lipsum]: doc/functions/lipsum.md
 [gist]: doc/functions/gist.md
 [pastebin]: doc/functions/pastebin.md
