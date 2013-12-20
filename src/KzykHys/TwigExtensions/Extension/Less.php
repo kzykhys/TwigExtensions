@@ -15,9 +15,11 @@ class Less extends \Twig_Extension
      */
     public function getTokenParsers()
     {
+        // @codeCoverageIgnoreStart
         if (!class_exists('lessc')) {
             return array();
         }
+        // @codeCoverageIgnoreEnd
 
         return array(
             new LessTokenParser()

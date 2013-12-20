@@ -36,9 +36,11 @@ class Markdown extends \Twig_Extension
      */
     public function getFilters()
     {
+        // @codeCoverageIgnoreStart
         if (!class_exists('Ciconia\\Ciconia')) {
             return array();
         }
+        // @codeCoverageIgnoreEnd
 
         return array(
             new \Twig_SimpleFilter('markdown', array($this, 'markdown'), array('is_safe' => array('html')))

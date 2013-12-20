@@ -15,9 +15,11 @@ class Pipe extends \Twig_Extension
      */
     public function getFilters()
     {
+        // @codeCoverageIgnoreStart
         if (!class_exists('Symfony\\Component\\Process\\Process')) {
             return array();
         }
+        // @codeCoverageIgnoreEnd
 
         return array(
             new \Twig_SimpleFilter('pipe', array($this, 'pipe'))
