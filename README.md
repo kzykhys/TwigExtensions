@@ -4,6 +4,7 @@ Twig Extensions
 [![Latest Unstable Version](https://poser.pugx.org/kzykhys/twig-extensions/v/unstable.png)](https://packagist.org/packages/kzykhys/twig-extensions)
 [![Build Status](https://travis-ci.org/kzykhys/TwigExtensions.png?branch=master)](https://travis-ci.org/kzykhys/TwigExtensions)
 [![Coverage Status](https://coveralls.io/repos/kzykhys/TwigExtensions/badge.png)](https://coveralls.io/r/kzykhys/TwigExtensions)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/2a42b187-ef35-4f7f-b1ea-518f20e34554/mini.png)](https://insight.sensiolabs.com/projects/2a42b187-ef35-4f7f-b1ea-518f20e34554)
 
 Add more fun to [Twig][twig]. Inspired by Jinja2, Jekyll ...
 
