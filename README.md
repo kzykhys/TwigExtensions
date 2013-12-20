@@ -31,6 +31,17 @@ Add more fun to [Twig][twig]. Inspired by Jinja2, Jekyll.
 {% endpygments %}
 ```
 
+Customized filesystem loader
+
+``` php
+<?php
+
+$loader = new \KzykHys\TwigExtensions\Loader\Filesystem(__DIR__ . '/../Resources/Loader');
+$twig   = new Twig_Environment($loader);
+
+$twig->render(array('date.twig', 'archive.twig', 'default.twig'));
+```
+
 Requirements
 ------------
 
@@ -68,6 +79,16 @@ Requirements
     }
     ```
 
+*   [symfony/process] for Pipe extension
+
+    ``` json
+    {
+        "require": {
+            "symfony/process": ">=2.3"
+        }
+    }
+    ```
+
 Installation
 ------------
 
@@ -95,17 +116,17 @@ A List of Extensions
 Extension       | Description
 ----------------|-----------
 Core            | Provides tags and tests
-Text            | Utilities for strings (Some of them are inspired by Python [Jinja2][jinja])
+Text            | Utilities for strings
 Snippet         | Embedding various snippets
 Markdown        | Github Flavored Markdown support
 SyntaxHighlight | Syntax Highlighting (pygments/google-code-prettify)
 Less            | Compiles LESS to CSS
-Pipe            |
+Pipe            | Use external commands as filters
 
-Register extensions to Twig
+Registering extensions to Twig
 -------------------------------
 
-Register all extensions
+Register all-in-one extension
 
 ``` php
 $loader = new Twig_Loader_Filesystem('/path/to/templates');
@@ -113,7 +134,7 @@ $twig   = new Twig_Environment($loader);
 $twig->addExtension(new \KzykHys\TwigExtensions\ExtensionAggregate());
 ```
 
-Or doing it manually
+Or register extensions which you like
 
 ``` php
 $loader = new Twig_Loader_Filesystem('/path/to/templates');
