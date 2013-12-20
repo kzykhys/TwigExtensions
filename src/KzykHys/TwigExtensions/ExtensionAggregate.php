@@ -23,7 +23,7 @@ class ExtensionAggregate
      */
     public static function register(\Twig_Environment $twig)
     {
-        $twig->setExtensions(self::all());
+        $twig->setExtensions(self::getExtensions());
 
         return $twig;
     }
