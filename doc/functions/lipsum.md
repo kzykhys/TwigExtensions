@@ -6,7 +6,7 @@ function **lipsum(paragraphs=5, html=true, min=20, max=100)** in [Text extension
 > Generates some lorem ipsum for the template.
 > By default 5 paragraphs (<p>) are generated each paragraph between 20 and 100 words.
 
-``` twig
+``` jinja
 {{ lipsum() }}
 ```
 

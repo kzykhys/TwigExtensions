@@ -5,7 +5,7 @@ tag **less** in [Less extension](../Less.md)
 
 > Compiles LESS to CSS
 
-``` twig
+``` jinja
 {% less %}
 .container {
   h1 {

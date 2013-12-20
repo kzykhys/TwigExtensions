@@ -11,7 +11,7 @@ $twig->render('template.twig', array(
 ));
 ```
 
-``` twig
+``` jinja
 {% if closure is callable %}
   {{ call(closure) }}
 {% endif %}

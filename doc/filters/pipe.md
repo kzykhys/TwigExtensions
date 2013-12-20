@@ -5,7 +5,7 @@ filter **pipe(command)** in [Pipe extension][../Pipe.md]
 
 > Executes an external command as a filter
 
-``` twig
+``` jinja
 {{ contents|pipe('/usr/bin/grep hello') }}
 ```
 

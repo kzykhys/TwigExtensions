@@ -5,7 +5,7 @@ tag **unless** in [Core extension](../Core.md)
 
 > Negated form of the if statement
 
-``` twig
+``` jinja
 {% unless false %}
   {# equivalent to "if not false" #}
 {% endunless %}

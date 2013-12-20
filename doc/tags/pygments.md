@@ -5,7 +5,7 @@ tag **pygments** in [SyntaxHighlight extension](../SyntaxHighlight.md)
 
 > Highlight the code using Python Pygments
 
-``` twig
+``` jinja
 {% pygments %}
 <?php
 
@@ -13,7 +13,7 @@ phpinfo();
 {% endpygments %}
 ```
 
-``` twig
+``` jinja
 {% pygments go %}
 package main
 import "fmt"
@@ -23,7 +23,7 @@ func main() {
 {% endpygments %}
 ```
 
-``` twig
+``` jinja
 {% pygments go linenos %}
 // with line numbers
 {% endpygments %}

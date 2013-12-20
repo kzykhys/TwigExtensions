@@ -11,7 +11,7 @@ $twig->render('template.twig', array(
 ));
 ```
 
-``` twig
+``` jinja
 {% if object is instance of('SplFileInfo') %}
   {{ object.path }}
 {% endif %}

@@ -5,7 +5,7 @@ function **gist(gist, file=null)** in [Snippet extension](../Snippet.md)
 
 > Embed a Github Gist
 
-``` twig
+``` jinja
 {{ gist(6316404) }}
 {{ gist(6316404, 'default.conf') }}
 ```
