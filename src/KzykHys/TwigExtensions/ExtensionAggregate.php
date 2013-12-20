@@ -5,6 +5,7 @@ namespace KzykHys\TwigExtensions;
 use KzykHys\TwigExtensions\Extension\Core;
 use KzykHys\TwigExtensions\Extension\Less;
 use KzykHys\TwigExtensions\Extension\Markdown;
+use KzykHys\TwigExtensions\Extension\Pipe;
 use KzykHys\TwigExtensions\Extension\Snippet;
 use KzykHys\TwigExtensions\Extension\SyntaxHighlight;
 use KzykHys\TwigExtensions\Extension\Text;
@@ -12,28 +13,35 @@ use KzykHys\TwigExtensions\Extension\Text;
 /**
  * @author Kazuyuki Hayashi <hayashi@valnur.net>
  */
-class ExtensionAggregate extends \Twig_Extension
+class ExtensionAggregate
 {
 
     /**
-     * {@inheritdoc}
+     * @param \Twig_Environment $twig
+     *
+     * @return \Twig_Environment
      */
-    public function initRuntime(\Twig_Environment $environment)
+    public static function register(\Twig_Environment $twig)
     {
-        $environment->addExtension(new Core());
-        $environment->addExtension(new Markdown());
-        $environment->addExtension(new Snippet());
-        $environment->addExtension(new SyntaxHighlight());
-        $environment->addExtension(new Text());
-        $environment->addExtension(new Less());
+        $twig->setExtensions(self::all());
+
+        return $twig;
     }
 
     /**
-     * {@inheritdoc}
+     * @return array|\Twig_Extension[]
      */
-    public function getName()
+    public static function getExtensions()
     {
-        return 'kzykhys_twig_extensions';
+        return array(
+            new Core(),
+            new Markdown(),
+            new Snippet(),
+            new SyntaxHighlight(),
+            new Text(),
+            new Less(),
+            new Pipe()
+        );
     }
 
 }
