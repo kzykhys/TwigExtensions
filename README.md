@@ -117,15 +117,15 @@ $twig->setExtensions(ExtensionAggregate::getExtensions());
 A List of Extensions
 --------------------
 
-Extension       | Description
-----------------|-----------
-Core            | Provides tags and tests
-Text            | Utilities for strings
-Snippet         | Embedding various snippets
-Markdown        | Github Flavored Markdown support
-SyntaxHighlight | Syntax Highlighting (pygments/google-code-prettify)
-Less            | Compiles LESS to CSS
-Pipe            | Use external commands as filters
+Extension                              | Description
+---------------------------------------|-----------
+[Core][ext-core]                       | Provides tags and tests
+[Text][ext-text]                       | Utilities for strings
+[Snippet][ext-snippet]                 | Embedding various snippets
+[Markdown][ext-markdown]               | Github Flavored Markdown support
+[SyntaxHighlight][ext-syntaxhighlight] | Syntax Highlighting (pygments/google-code-prettify)
+[Less][ext-less]                       | Compiles LESS to CSS
+[Pipe][ext-pipe]                       | Use external commands as filters
 
 Registering extensions to Twig
 -------------------------------
@@ -152,63 +152,71 @@ Twig Extensions Reference
 
 ### Tags
 
-Name             | Extension       | Description
------------------|-----------------|-------------
-[unless]         | Core            | Negated form of the if statement
-[pygments]       | SyntaxHighlight | Highlight the code (requires [Pygments.php][pygmentsphp])
-[less]           | Less            | Converts LESS to CSS
+Name             | Extension                              | Description
+-----------------|----------------------------------------|-------------
+[unless]         | [Core][ext-core]                       | Negated form of the if statement
+[pygments]       | [SyntaxHighlight][ext-syntaxhighlight] | Highlight the code (requires [Pygments.php][pygmentsphp])
+[less]           | [Less][ext-less]                       | Converts LESS to CSS
 
 ### Filters
 
-Name             | Extension       | Description
------------------|-----------------|-------------
-[center]         | Text            | Centers the value in a field of a given width.
-[filesizeformat] | Text            | Format the value like a ‘human-readable’ file size (i.e. 13 kB, 4.1 MB, 102 Bytes, etc)
-[markdown]       | Markdown        | Transform markdown into html
-[md5]            | Text            | Calculate the md5 hash of a string
-[sha1]           | Text            | Calculate the sha1 hash of a string
-[sha512]         | Text            | Calculate the sha512 hash of a string
-[pipe]           | Pipe            | Executes an external command
+Name             | Extension                              | Description
+-----------------|----------------------------------------|-------------
+[center]         | [Text][ext-text]                       | Centers the value in a field of a given width.
+[filesizeformat] | [Text][ext-text]                       | Format the value like a ‘human-readable’ file size (i.e. 13 kB, 4.1 MB, 102 Bytes, etc)
+[markdown]       | [Markdown][ext-markdown]               | Transform markdown into html
+[md5]            | [Text][ext-text]                       | Calculate the md5 hash of a string
+[sha1]           | [Text][ext-text]                       | Calculate the sha1 hash of a string
+[sha512]         | [Text][ext-text]                       | Calculate the sha512 hash of a string
+[pipe]           | [Pipe][ext-pipe]                       | Executes an external command
 
 ### Functions
 
-Name             | Extension       | Description
------------------|-----------------|-------------
-[call]           | Core            | Call a callback
-[lipsum]         | Text            | Generates some lorem ipsum for the template
-[gist]           | Snippet         | Embed a gist
-[pastebin]       | Snipeet         | Embed a pastebin
+Name             | Extension                              | Description
+-----------------|----------------------------------------|-------------
+[call]           | [Core][ext-core]                       | Call a callback
+[lipsum]         | [Text][ext-text]                       | Generates some lorem ipsum for the template
+[gist]           | [Snippet][ext-snippet]                 | Embed a gist
+[pastebin]       | [Snippet][ext-snippet]                 | Embed a pastebin
 
 ### Tests
 
-Name             | Extension       | Description
------------------|-----------------|-------------
-[callable]       | Core            | Return whether the object is callable
-[instanceof]     | Core            | Return whether a variable is an instantiated object of a certain class
+Name             | Extension                              | Description
+-----------------|----------------------------------------|-------------
+[callable]       | [Core][ext-core]                       | Return whether the object is callable
+[instanceof]     | [Core][ext-core]                       | Return whether a variable is an instantiated object of a certain class
 
 
-[unless]: doc/tags/unless.md
-[pygments]: doc/tags/pygments.md
-[less]: doc/tags/less.md
+[ext-core]:            doc/Core.md
+[ext-text]:            doc/Text.md
+[ext-snippet]:         doc/Snippet.md
+[ext-markdown]:        doc/Markdown.md
+[ext-syntaxhighlight]: doc/SyntaxHighlight.md
+[ext-less]:            doc/Less.md
+[ext-pipe]:            doc/Pipe.md
 
-[center]: doc/filters/center.md
+[unless]:         doc/tags/unless.md
+[pygments]:       doc/tags/pygments.md
+[less]:           doc/tags/less.md
+
+[center]:         doc/filters/center.md
 [filesizeformat]: doc/filters/filesizeformat.md
-[markdown]: doc/filters/markdown.md
-[md5]: doc/filters/md5.md
-[sha1]: doc/filters/sha1.md
-[sha512]: doc/filters/sha512.md
-[pipe]: doc/filters/pipe.md
+[markdown]:       doc/filters/markdown.md
+[md5]:            doc/filters/md5.md
+[sha1]:           doc/filters/sha1.md
+[sha512]:         doc/filters/sha512.md
+[pipe]:           doc/filters/pipe.md
 
-[call]: doc/functions/call.md
-[lipsum]: doc/functions/lipsum.md
-[gist]: doc/functions/gist.md
-[pastebin]: doc/functions/pastebin.md
+[call]:           doc/functions/call.md
+[lipsum]:         doc/functions/lipsum.md
+[gist]:           doc/functions/gist.md
+[pastebin]:       doc/functions/pastebin.md
 
-[callable]: doc/tests/callable.md
-[instanceof]: doc/tests/instanceof.md
+[callable]:       doc/tests/callable.md
+[instanceof]:     doc/tests/instanceof.md
 
-[twig]: http://twig.sensiolabs.org
-[jinja]: http://jinja.pocoo.org
-[pygmentsphp]: https://github.com/kzykhys/Pygments.php
-[ciconia]: http://ciconia.kzykhys.com/
-[lessphp]: http://leafo.net/lessphp/
+[twig]:           http://twig.sensiolabs.org
+[jinja]:          http://jinja.pocoo.org
+[pygmentsphp]:    https://github.com/kzykhys/Pygments.php
+[ciconia]:        http://ciconia.kzykhys.com/
+[lessphp]:        http://leafo.net/lessphp/
